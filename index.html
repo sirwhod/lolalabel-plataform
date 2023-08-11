@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/qr-code-fill.svg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body,
+      #root,
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .span-class {
+        font-family: 'Poppins';
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1c1c1e;
+      }
+
+      .text-container {
+        margin-top: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .text-container strong {
+        font-family: 'Roboto', seans-serif;
+        font-weight: normal;
+        color: #99989d;
+      }
+
+      .loader {
+        display: inline-block;
+        position: relative;
+        width: 64px;
+        height: 64px;
+      }
+
+      .loader-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-image: radial-gradient(#dad9df 20%, #dad9df 30%, #f7f7f7);
+      }
+
+      .loader-container span {
+        color: #333;
+        margin-bottom: 50px;
+      }
+
+      .loader div {
+        position: absolute;
+        border: 4px solid #333;
+        opacity: 1;
+        border-radius: 50%;
+        animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+
+      .loader div:nth-child(2) {
+        animation-delay: -0.5s;
+      }
+
+      @keyframes loader {
+        0% {
+          top: 28px;
+          left: 28px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+
+        100% {
+          top: -1px;
+          left: -1px;
+          width: 58px;
+          height: 58px;
+          opacity: 0;
+        }
+      }
+    </style>
+    <title>Plataforma Rótulos</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loader-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="240"
+          height="240"
+          fill="#1a1a1a"
+          viewBox="0 0 256 256"
+        >
+          <rect x="40" y="40" width="80" height="80" rx="16"></rect>
+          <rect x="40" y="136" width="80" height="80" rx="16"></rect>
+          <rect x="136" y="40" width="80" height="80" rx="16"></rect>
+          <path
+            d="M144,184a8,8,0,0,0,8-8V144a8,8,0,0,0-16,0v32A8,8,0,0,0,144,184Z"
+          ></path>
+          <path
+            d="M208,152H184v-8a8,8,0,0,0-16,0v56H144a8,8,0,0,0,0,16h32a8,8,0,0,0,8-8V168h24a8,8,0,0,0,0-16Z"
+          ></path>
+          <path
+            d="M208,184a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V192A8,8,0,0,0,208,184Z"
+          ></path>
+        </svg>
+        <span class="span-class">Plataforma rótulos</span>
+        <div class="loader">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="text-container">
+          <strong>Estamos preparando a plataforma para você!</strong>
+          <strong>Por favor, aguarde!</strong>
+        </div>
+        <a
+          href="http://github.com/sirwhod"
+          target="_blank"
+          style="
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            margin-top: 20px;
+            max-height: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(240, 240, 240);
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 5px;
+            gap: 5px;
+          "
+        >
+          <p style="color: rgb(212, 212, 212)">Developed by</p>
+          <img
+            style="width: 1rem; height: 1rem; flex-shrink: 0"
+            src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fpublic.notion-static.com%2F44379aae-5bd8-4bfa-97e2-268bda283cfb%2FSubtract_(2).svg?id=f2d2afe8-82f4-4b3c-987f-0d501b65929d&table=space&spaceId=f2d2afe8-82f4-4b3c-987f-0d501b65929d&userId=4b05cb44-53dc-4b6f-954b-7c18f159934a&cache=v2"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
